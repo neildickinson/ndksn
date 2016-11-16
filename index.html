@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600" rel="stylesheet" /> 
+  <link rel="stylesheet" title="default" media="all" href="screen.css" />
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Title</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+
+  <meta name="robots" content="noindex,nofollow"/>
+  <meta name="language" content="en-GB"/>
+  <meta http-equiv="cleartype" content="on" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+
+</head>
+
+
+
+<body>
+
+<a href="#content" id="top" class="hide" accesskey="S">Skip to Content</a>
+
+
+<main class="wrap">
+<div class="container">
+  <h1>Buy something awsome</h1>
+
+  <div class="left-col">
+  <div class="form-content">
+
+    
+    <h2>Card Details:</h2>
+    <p>All form fields are required.</p>
+    <form id="creditcardform" name="creditcardform" action="#">
+
+    <fieldset>
+      <legend>Credit Card Details</legend>
+
+      <p class="field">
+        <label for="name_on_card">Name on Card</label>
+        <span class="data">
+          <input type="text" name="name_on_card" id="name_on_card" required="required" class="txt" />
+        </span>
+      </p>
+
+      <p class="field">
+        <label for="card_number">Card Number</label>
+        <span class="data">
+          <input type="type" name="card_number" id="card_number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" autocomplete="off" required="required" class="txt" />
+        </span>
+      </p>
+
+      <p class="field">
+        <label for="card_expires">Card Expiry Date</label>
+        <span class="data">
+          <select name="card_expires_month" id="card_expires_month" required="required"  class="txt txt-small">
+            <option>Month</option>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>
+
+          <span style="float: left; padding: 1rem">/</span> 
+
+          <select name="card_expires_year" id="card_expires_year" required="required"  class="txt txt-vsmall">
+            <option>Year</option>
+            <option value="16">16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+          </select>
+
+          <!--
+          <input type="type" name="card_expires" id="card_expires" maxlength="5" placeholder="MM/YY" autocomplete="off" required="required" class="txt txt-small"  />
+          //-->
+        </span>
+      </p>
+
+      <p class="field">
+        <label for="cvv">CVV</label>
+        <span class="data">
+          <input type="text" name="cvv" id="cvv" autocomplete="off"  maxlength="4" required="required" class="txt txt-vsmall" /> 
+          <em class="info">What is CVV? Last 3 digits back of card or (for Amex) the 4 digits above card number</em>
+        </span>
+      </p>
+
+
+    </fieldset>
+
+
+    <fieldset>
+      <legend>Total and pay</legend>
+
+      <p class="field">
+        <label for="amount_to_pay">Amount to Pay</label>
+        <span class="data">
+          <span class="pound-disabled">&pound;</span>
+          <input type="text" name="amount_to_pay" id="amount_to_pay" value="123.45" disabled="disabled" class="txt txt-small txt-amount"  />
+        </span>
+      </p>
+
+      <p class="field field-button">
+        <span class="data">
+        <button class="button" type="submit">Pay Now</button>
+        </span>
+      </p>
+
+
+
+    </fieldset>
+
+    </form>
+    </div>
+  </div>
+
+
+
+  <div class="right-col">
+    <div class="aside-content">
+    <aside class="address">
+      
+      <h2>Shipping Address:</h2>
+      <a class="change" href="#" title="Change Shipping Addresss">Change</a>
+      <address>
+        Team Pulsar<br />
+        Round Foundry Media Center<br />
+        David Street<br />
+        Holbeck<br />
+        Leeds<br />
+        LS2 5QP
+      </address>
+    </aside>
+
+    <aside class="address">
+      <h2>Billing Address:</h2>
+      <a class="change" href="#" title="Change Billing Addresss">Change</a>
+      <address>
+        Same as shipping address
+      </address>
+    </aside>
+  </div>   
+  </div>
+
+
+</div>
+</main>
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+// Add spaces to card field
+// only show numbers
+//<![CDATA[
+window.onload=function(){
+
+$('#card_number').on('keypress change', function () {
+  $(this).val(function (index, value) {
+
+    return value.replace(/[^0-9]/g, "").replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
+  });
+});
+
+/*
+$('#card_expires').on('keypress change', function () {
+  $(this).val(function (index, value) {
+    return value.replace(/[^0-9]/g, "").replace(/\W/gi, '').replace(/(.{2})/g, '$1/');
+  });
+});
+*/
+
+
+
+$('#cvv').on('keypress change', function () {
+  $(this).val(function (index, value) {
+    return value.replace(/[^0-9]/g, "").replace(/\W/gi, '');
+  });
+});
+
+}
+//]]> 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,460 @@
+
+/* ***********************************************/
+/* DEFAULTS */
+/* ***********************************************/
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, input, textarea, button, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  border: 0 none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+
+  vertical-align: baseline;
+}
+
+*, *:before, *:after, hr, hr:before, hr:after, input[type="search"], input[type="search"]:before, input[type="search"]:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  line-height: 100%;
+  font-kerning: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1,h2,h3,h4,h5 {
+	font-weight: 400;
+    line-height: 95%;
+}
+
+
+h1 {
+	font-size:3.6rem;
+}
+
+h2 {
+	font-size:2rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h3 {
+	font-size:1.8rem;
+}
+
+
+p, address {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 130%;
+    margin: 0 0 2rem 0;
+}
+
+address {
+    font-size: 1.4rem;
+}
+
+
+a {
+    color:#3598de;
+}
+
+a:hover, a:focus  {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+ul {
+    font-size:1.6rem;
+}
+li {
+    line-height: 150%;
+}
+
+
+
+
+
+
+
+
+/* ######################################### */
+/* FORM FIELDS DEFAULTS */
+/* ######################################### */
+
+
+fieldset { 
+    border:0;  
+    padding: 3rem 0;
+    margin: 0;  
+}
+
+fieldset:first-child {   
+    border-top: 0;
+    margin: 0 0 1px 0;  
+    border-bottom: 1px solid #ccc;
+}
+
+fieldset:last-child {   
+    border-top: 1px solid #ccc;
+    padding: 3rem 0 0 0;
+    margin: 0; 
+    border-bottom: 0; 
+}
+
+
+legend {
+    display: none;
+}
+
+label {
+    font-weight: 400;
+    width: 100%;
+    float: left;
+    margin-right: 0;
+    padding-bottom: 5px;
+    color: #000;
+    padding-top: 0;
+    font-size: 1.4rem;
+    line-height: 120%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+@media (min-width: 450px) {
+    label {
+        width: 25%;
+        margin-right: 5%;
+        text-align: right;
+        padding-top: 5px;
+        padding-bottom: 0;
+    }
+}
+
+
+input, textarea, select {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 1.6rem;
+    padding: 1rem;
+    color: #333;
+    float: left;
+    width: 100%;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+input[type="text"]:disabled {
+    background: #eee;
+}
+
+
+
+
+
+.pound-disabled {
+    border-radius: 2px 0 0 2px;
+    border: 1px solid #ccc;
+    border-right: 0;
+    background-color: #ddd;
+    color: #333;
+    float: left;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+
+.data {
+    width: 100%;
+    float: left;
+    display: block;
+}
+
+@media (min-width: 450px) {
+
+    .data {
+        width: 70%;
+    }
+
+}
+
+
+
+.txt-small {
+    width: 35%;
+}
+
+.txt-vsmall {
+    width: 20%;
+}
+
+.txt-amount {
+    font-weight: 400;
+    border-radius: 0 2px 2px 0;
+}
+
+.info {
+    font-size: 1.2rem;
+    display: block;
+    clear: both;
+    line-height: 120%;
+}
+
+.button {
+    background-color: #3598de;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.4rem;
+    border:0;
+    -webkit-box-shadow: 1px 1px 0 0 rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 0 0 rgba(0,0,0,0.3);
+    border-radius: 2px;
+    padding: 1.3rem;
+}
+
+.button:hover, .button:focus {
+    background-color: #3598de;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #3598de;
+    -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.3);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.3);
+}
+
+
+
+.field {
+    clear: both;
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.field:last-child {
+    margin: 0 0 0 0;
+}
+
+.field-button .data {
+    margin-left: 0;
+}
+
+@media (min-width: 450px) {
+
+    .field-button .data {
+        margin-left: 30%;
+    }
+
+}
+
+
+
+
+
+
+/* ######################################### */
+/* LAYOUT  */
+/* ######################################### */
+
+
+.wrap {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+
+.container {
+    width: 100%;
+    float: left;
+    padding: 0 2rem;
+}
+
+.left-col {
+    width: 100%;
+    float: left;
+    
+}
+
+.form-content {
+    border-right: 0;
+    padding-right: 0;
+}
+
+.right-col {
+    width: 100%;
+    float: left;
+    margin-top: 3rem;
+    border-top: 1px solid #ccc;
+}
+
+
+
+@media (min-width: 668px) {
+
+    .left-col {
+        width: 60%;
+    }
+
+    .right-col {
+        width: 40%;
+        margin-top: 0;
+        border-top: 0;
+    }
+
+    .form-content {
+        border-right: 1px solid #ccc;
+        padding-right: 3rem;
+    }
+
+}
+
+
+
+
+/* ######################################### */
+/* RIGHT COLUMN  */
+/* ######################################### */
+
+
+.aside-content {
+    padding-left: 0;
+    margin-top: 1px;
+    border-top: 1px solid #ccc;
+}
+
+@media (min-width: 668px) {
+
+    .aside-content {
+        padding-left: 3rem;
+        margin-top: 0;
+        border-top: 0;
+    }
+
+}
+
+.address {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.address:first-child {   
+    border-top: 0;
+    margin: 0 0 1px 0;  
+    border-bottom: 1px solid #ccc;
+}
+
+.address:last-child {   
+    border-top: 1px solid #ccc;
+    padding: 2rem 0 0 0;
+    margin: 0; 
+    border-bottom: 0; 
+}
+
+.change {
+    position: absolute;
+    top: 2.5rem;
+    right: 0px;
+    font-size: 1.4rem;
+}
+
+
+
+
+/* ######################################### */
+/* GLOBAL TEXT SIZE REDUCTION  */
+/* ######################################### */
+
+
+@media (max-width: 450px) {
+
+    ul {
+        font-size:1.4rem;
+    }
+
+    p, address {
+        font-size: 1.4rem;
+    }
+
+    h1 {
+        font-size:3.0rem;
+    }
+
+    h2 {
+        font-size:1.8rem;
+    }
+
+    h3 {
+        font-size:1.6rem;
+    }
+
+    .change {
+        font-size: 1.3rem;
+    }
+
+    .button {
+        font-size: 1.3rem;
+    }
+
+
+    .pound-disabled {
+
+        font-size: 1.4rem;
+    }
+
+    input, textarea, select {
+        font-size: 1.4rem;
+    }
+
+}
+
+
+
+
+
+
+
+
