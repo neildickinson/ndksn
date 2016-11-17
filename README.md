@@ -10,4 +10,6 @@ I have used 2 selects for the Card Expiry Date, with the number formatting consi
 
 I've removed the blue '?' info button for the CCV field, I've added the help information next to the field.
 
+The 'Amount to Pay' field is disabled -you don't want user changing the total, I have slightly greyed this out to indicate this.
+
 I've added some affordance on the 'Pay Now' button. I have also removed the 'Cancel' button, i counldn't thibnk of a reason why this action would be needed.
